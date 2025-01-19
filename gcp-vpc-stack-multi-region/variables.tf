@@ -31,11 +31,11 @@ variable "vpc_name" {
   default     = "example-vpc"
 }
 
-# VPC CIDR
-variable "vpc_cidr" {
-  description = "VPC CIDR block"
-  type        = string
-  default     = "10.0.0.0/16"
+## Subnets Regions
+variable "subnets_regions" {
+  description = "List of regions for the subnets"
+  type        = list(string)
+  default     = ["us-central1", "us-east1"]
 }
 
 # Subnets CIDR Blocks
@@ -55,11 +55,11 @@ variable "subnets_names" {
 
 ## Compuite Engine
 
-# Zones for Subnets
+# Zones for VirtualMachines
 variable "gcp_zones" {
   description = "List of GCP zones for the subnets"
   type        = list(string)
-  default     = ["us-central1-a", "us-central1-b"] 
+  default     = ["us-central1-a", "us-east1-b"] 
 }
 
 # Image ID
