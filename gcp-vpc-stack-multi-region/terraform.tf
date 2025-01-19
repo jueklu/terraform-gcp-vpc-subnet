@@ -8,7 +8,7 @@ terraform {
   }
 }
 
-# Provider GCP
+# Provider GCP Region (Fallback)
 provider "google" {
   credentials = file(var.gcp_credentials_file)
   project     = var.gcp_project_id

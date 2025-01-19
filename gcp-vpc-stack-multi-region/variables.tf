@@ -31,7 +31,7 @@ variable "vpc_name" {
   default     = "example-vpc"
 }
 
-## Subnets Regions
+# Subnets Regions: Define different regions
 variable "subnets_regions" {
   description = "List of regions for the subnets"
   type        = list(string)
@@ -55,7 +55,7 @@ variable "subnets_names" {
 
 ## Compuite Engine
 
-# Zones for VirtualMachines
+# Zones for VirtualMachines: Define different region AZ
 variable "gcp_zones" {
   description = "List of GCP zones for the subnets"
   type        = list(string)

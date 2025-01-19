@@ -48,7 +48,7 @@ variable "subnets_names" {
 
 ## Compuite Engine
 
-# Zones for Subnets
+# Zones for Subnets: Define different AZs
 variable "gcp_zones" {
   description = "List of GCP zones for the subnets"
   type        = list(string)
